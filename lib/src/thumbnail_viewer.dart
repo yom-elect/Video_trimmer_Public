@@ -54,23 +54,40 @@ class ThumbnailViewer extends StatelessWidget {
       stream: generateThumbnail(),
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          List<Uint8List> _imageBytes = snapshot.data;
           return ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: snapshot.data.length,
               itemBuilder: (context, index) {
-                return Container(
-                  height: thumbnailHeight,
-                  width: thumbnailHeight,
-                  child: Image(
-                    image: MemoryImage(_imageBytes[index]),
-                    fit: fit,
-                  ),
+                return Stack(
+                  children: <Widget>[
+                    // Max Size
+                    Container(
+                      height: thumbnailHeight,
+                      width: thumbnailHeight,
+                      color: Color.fromRGBO(180, 0, 255, 1),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20, top: 15),
+                      child: Container(
+                        color: Colors.white,
+                        height: 19.0,
+                        width: 3.0,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 45, top: 15),
+                      child: Container(
+                        color: Colors.white,
+                        height: 19.0,
+                        width: 3.0,
+                      ),
+                    ),
+                  ],
                 );
               });
         } else {
           return Container(
-            color: Colors.grey[900],
+            color: Color.fromRGBO(180, 0, 255, 1),
             height: thumbnailHeight,
             width: double.maxFinite,
           );

@@ -46,6 +46,7 @@ class TrimEditor extends StatefulWidget {
   ///
   /// By default it is set to `Colors.white`.
   final Color borderPaintColor;
+  final double borderWidth;
 
   /// For specifying a color to the video
   /// scrubber inside the trim area.
@@ -169,6 +170,7 @@ class TrimEditor extends StatefulWidget {
     this.scrubberPaintColor = Colors.white,
     this.thumbnailQuality = 75,
     this.showDuration = true,
+    this.borderWidth = 5,
     this.durationTextStyle = const TextStyle(
       color: Colors.white,
     ),
@@ -522,6 +524,7 @@ class _TrimEditorState extends State<TrimEditor> with TickerProviderStateMixin {
               circlePaintColor: widget.circlePaintColor,
               borderPaintColor: widget.borderPaintColor,
               scrubberPaintColor: widget.scrubberPaintColor,
+              borderWidth: widget.borderWidth,
             ),
             child: Container(
               color: Colors.grey[900],

@@ -92,7 +92,7 @@ class TrimEditorPainter extends CustomPainter {
     this.showScrubber = true,
     this.borderPaintColor = Colors.white,
     this.circlePaintColor = Colors.white,
-    this.scrubberPaintColor = Colors.white,
+    this.scrubberPaintColor = const Color(0xFFCE93D8),
   })  : assert(startPos != null),
         assert(endPos != null),
         assert(scrubberAnimationDx != null),
