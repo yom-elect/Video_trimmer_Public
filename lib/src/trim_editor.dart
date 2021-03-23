@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-import 'package:video_trimmer/src/thumbnail_viewer.dart';
-import 'package:video_trimmer/src/trim_editor_painter.dart';
-import 'package:video_trimmer/src/trimmer.dart';
+import 'package:popsical_video_trimmer/src/thumbnail_viewer.dart';
+import 'package:popsical_video_trimmer/src/trim_editor_painter.dart';
+import 'package:popsical_video_trimmer/src/trimmer.dart';
 
 VideoPlayerController videoPlayerController;
 
