@@ -1,7 +1,7 @@
-name: video_trimmer
+name: popsical_video_trimmer
 description: A Flutter package for trimming videos. This supports retrieving, trimming, and storage of trimmed video files to the file system.
 version: 0.3.5
-homepage: https://github.com/sbis04/video_trimmer
+homepage: https://github.com/yom-elect/Video_trimmer_Public.git
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
